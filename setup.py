@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="yavin",
-    version="1.2.0.dev0",
+    version="1.0.0",
     description="Python API client for the Yavin API",
     long_description="Python API client for the Yavin API",
     long_description_content_type="text/markdown",
