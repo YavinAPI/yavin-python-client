@@ -9,4 +9,5 @@ deploy_production:
     TWINE_USERNAME: $TWINE_USERNAME
     TWINE_PASSWORD: $TWINE_PASSWORD
   script:
+    - python setup.py sdist
     - twine upload dist/*
