@@ -1,11 +1,7 @@
-image: python:3.6-alpine
+image: pypiserver/pypiserver
 
 stages:
   - deploy
-
-before_script:
-   - pip install twine
-   - python setup.py sdist
 
 deploy_production:
   stage: deploy
@@ -14,5 +10,3 @@ deploy_production:
     TWINE_PASSWORD: $TWINE_PASSWORD
   script:
     - twine upload dist/*
-  only:
-    - tags
